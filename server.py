@@ -6,6 +6,7 @@ from flask import jsonify
 from sqlalchemy.sql import func
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/datos4.db'
 db = SQLAlchemy(app)
 
